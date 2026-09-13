@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Einfacher Prozentrechner</title>
+  <meta name="description" content="Ein einfacher Prozentrechner als Beispiel für eine kostenlose GitHub-Pages-Webseite." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Prozentrechner</h1>
+    <p>Berechne, wie viel ein bestimmter Prozentsatz von einem Wert ist.</p>
+
+    <label for="wert">Grundwert</label>
+    <input id="wert" type="number" step="any" placeholder="z. B. 250" />
+
+    <label for="prozent">Prozent</label>
+    <input id="prozent" type="number" step="any" placeholder="z. B. 19" />
+
+    <button id="berechnen">Berechnen</button>
+
+    <div id="ergebnis" class="result" aria-live="polite">Ergebnis: –</div>
+
+    <section class="example">
+      <h2>Beispiel</h2>
+      <p>19 % von 250 sind 47,50.</p>
+    </section>
+
+    <footer>
+      <p>Demo-Webseite für GitHub Pages</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
