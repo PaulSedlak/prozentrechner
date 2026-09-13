@@ -1,36 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Einfacher Prozentrechner</title>
-  <meta name="description" content="Ein einfacher Prozentrechner als Beispiel für eine kostenlose GitHub-Pages-Webseite." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kostenlose Rechner für Energie, Technik und Alltag. Starte mit unserem Stromkostenrechner und berechne Verbrauch und Kosten einfach online.">
+  <title>Rechner für Energie, Technik und Alltag</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="card">
-    <h1>Prozentrechner</h1>
-    <p>Berechne, wie viel ein bestimmter Prozentsatz von einem Wert ist.</p>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">RechnerWerk</a>
+      <nav aria-label="Hauptnavigation">
+        <a href="#rechner">Rechner</a>
+        <a href="#ueber-uns">Über die Seite</a>
+      </nav>
+    </div>
+  </header>
 
-    <label for="wert">Grundwert</label>
-    <input id="wert" type="number" step="any" placeholder="z. B. 250" />
-
-    <label for="prozent">Prozent</label>
-    <input id="prozent" type="number" step="any" placeholder="z. B. 19" />
-
-    <button id="berechnen">Berechnen</button>
-
-    <div id="ergebnis" class="result" aria-live="polite">Ergebnis: –</div>
-
-    <section class="example">
-      <h2>Beispiel</h2>
-      <p>19 % von 250 sind 47,50.</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Kostenlose Online-Rechner</span>
+          <h1>Praktische Rechner für Energie, Technik und Alltag</h1>
+          <p class="lead">Schnell rechnen, Ergebnisse verstehen und Formeln nachvollziehen – ohne Anmeldung und direkt im Browser.</p>
+          <a class="button" href="stromkostenrechner.html">Stromkosten berechnen</a>
+        </div>
+        <div class="hero-card">
+          <strong>Neu</strong>
+          <h2>Stromkostenrechner</h2>
+          <p>Berechne Verbrauch und Kosten eines elektrischen Geräts pro Tag, Monat und Jahr.</p>
+          <a href="stromkostenrechner.html">Zum Rechner →</a>
+        </div>
+      </div>
     </section>
 
-    <footer>
-      <p>Demo-Webseite für GitHub Pages</p>
-    </footer>
+    <section class="section" id="rechner">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Unsere Rechner</span>
+          <h2>Einfach auswählen und losrechnen</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="tool-card active-card">
+            <div class="tool-icon">⚡</div>
+            <h3>Stromkostenrechner</h3>
+            <p>Berechne Stromverbrauch und Kosten anhand von Leistung, Nutzungsdauer und Strompreis.</p>
+            <a href="stromkostenrechner.html">Rechner öffnen →</a>
+          </article>
+
+          <article class="tool-card muted-card">
+            <div class="tool-icon">🚗</div>
+            <h3>Spritkostenrechner</h3>
+            <p>Fahrtkosten anhand von Strecke, Verbrauch und Kraftstoffpreis berechnen.</p>
+            <span>Demnächst</span>
+          </article>
+
+          <article class="tool-card muted-card">
+            <div class="tool-icon">🔌</div>
+            <h3>Elektrische Leistung</h3>
+            <p>Leistung, Spannung, Strom und Widerstand einfach berechnen.</p>
+            <span>Demnächst</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="ueber-uns">
+      <div class="container narrow">
+        <span class="eyebrow">Warum RechnerWerk?</span>
+        <h2>Rechnen ohne unnötigen Ballast</h2>
+        <p>Die Rechner sollen nicht nur ein Ergebnis ausgeben, sondern auch verständlich zeigen, wie es zustande kommt. Alle Berechnungen laufen direkt im Browser. Es werden dafür keine persönlichen Daten benötigt.</p>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <span>© <span id="year"></span> RechnerWerk</span>
+      <span>Impressum und Datenschutz folgen vor dem öffentlichen Ausbau.</span>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

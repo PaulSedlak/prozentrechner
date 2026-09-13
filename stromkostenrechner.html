@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stromkostenrechner: Berechne Verbrauch und Stromkosten eines Geräts pro Tag, Monat und Jahr anhand von Leistung, Nutzungsdauer und Strompreis.">
+  <title>Stromkostenrechner – Verbrauch und Kosten berechnen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">RechnerWerk</a>
+      <nav aria-label="Hauptnavigation">
+        <a href="index.html#rechner">Rechner</a>
+        <a href="index.html#ueber-uns">Über die Seite</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section calculator-page">
+      <div class="container">
+        <a class="back-link" href="index.html">← Zur Startseite</a>
+        <div class="calculator-layout">
+          <div>
+            <span class="eyebrow">Energie</span>
+            <h1>Stromkostenrechner</h1>
+            <p class="lead small-lead">Berechne, wie viel Strom ein elektrisches Gerät verbraucht und was dich der Betrieb pro Tag, Monat und Jahr kostet.</p>
+
+            <form class="calculator-card" id="stromForm">
+              <div class="field-grid">
+                <label>
+                  Leistung des Geräts
+                  <div class="input-unit">
+                    <input id="leistung" type="number" min="0" step="1" value="2000" required>
+                    <span>W</span>
+                  </div>
+                </label>
+
+                <label>
+                  Nutzung pro Tag
+                  <div class="input-unit">
+                    <input id="stunden" type="number" min="0" step="0.1" value="2" required>
+                    <span>h</span>
+                  </div>
+                </label>
+
+                <label>
+                  Strompreis
+                  <div class="input-unit">
+                    <input id="strompreis" type="number" min="0" step="0.01" value="0.30" required>
+                    <span>€/kWh</span>
+                  </div>
+                </label>
+
+                <label>
+                  Nutzungstage pro Jahr
+                  <div class="input-unit">
+                    <input id="tage" type="number" min="0" max="366" step="1" value="365" required>
+                    <span>Tage</span>
+                  </div>
+                </label>
+              </div>
+
+              <button class="button full" type="submit">Berechnen</button>
+            </form>
+          </div>
+
+          <aside class="result-card" aria-live="polite">
+            <span class="eyebrow">Dein Ergebnis</span>
+            <div class="result-row"><span>Verbrauch pro Tag</span><strong id="verbrauchTag">4,00 kWh</strong></div>
+            <div class="result-row"><span>Kosten pro Tag</span><strong id="kostenTag">1,20 €</strong></div>
+            <div class="result-row"><span>Kosten pro Monat</span><strong id="kostenMonat">36,50 €</strong></div>
+            <div class="result-row total"><span>Kosten pro Jahr</span><strong id="kostenJahr">438,00 €</strong></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container content-grid">
+        <article>
+          <span class="eyebrow">Berechnung</span>
+          <h2>So werden die Stromkosten berechnet</h2>
+          <p>Zuerst wird die Leistung des Geräts von Watt in Kilowatt umgerechnet. Anschließend wird die Leistung mit der Nutzungsdauer multipliziert.</p>
+          <div class="formula">Verbrauch = Leistung in kW × Nutzungsdauer in Stunden</div>
+          <p>Die Stromkosten ergeben sich dann aus dem Verbrauch in Kilowattstunden und dem Preis pro Kilowattstunde.</p>
+          <div class="formula">Kosten = Verbrauch in kWh × Strompreis</div>
+        </article>
+
+        <article>
+          <span class="eyebrow">Beispiel</span>
+          <h2>2.000-Watt-Gerät für 2 Stunden</h2>
+          <p>Ein Gerät mit 2.000 Watt entspricht 2 kW. Bei zwei Stunden Laufzeit werden 4 kWh verbraucht.</p>
+          <p>Bei einem Strompreis von 0,30 €/kWh entstehen Kosten von 1,20 € pro Tag.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <span class="eyebrow">Hinweis</span>
+        <h2>Was beeinflusst das Ergebnis?</h2>
+        <p>Die tatsächlichen Kosten können abweichen, wenn ein Gerät nicht dauerhaft mit seiner maximalen Nennleistung arbeitet. Kühlschränke, Heizgeräte, Computer oder Waschmaschinen regeln ihre Leistung häufig während des Betriebs.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <span>© <span id="year"></span> RechnerWerk</span>
+      <span>Impressum und Datenschutz folgen vor dem öffentlichen Ausbau.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
