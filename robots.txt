@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paulsedlak.github.io/prozentrechner/sitemap.xml
